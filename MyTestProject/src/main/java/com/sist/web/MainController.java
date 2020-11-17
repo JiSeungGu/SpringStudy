@@ -9,7 +9,6 @@ import java.util.*;
 
 @Controller
 public class MainController {
-	
 	@RequestMapping("main/main.do")
 	public String main_main(String page,Model model)
 	{
