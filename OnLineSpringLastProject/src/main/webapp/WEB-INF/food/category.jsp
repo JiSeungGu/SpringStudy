@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
 <div class="latest-products">
@@ -34,11 +35,11 @@
                 <a href="../food/food_detail.do?no=${fvo.no }"><img src="${fvo.posterOne }" width=350 height=150></a>
               </td>
               <td width=65%>
-                <h3>${fvo.title }&nbsp;<span style="color:orange">${fvo.score }</span></h3>
+                <h3><a href="../food/food_detail.do?no=${fvo.no }">${fvo.title }</a>&nbsp;<span style="color:orange">${fvo.score }</span></h3>
               </td>
             </tr>
             <tr>
-              <td width=65%>${fvo.addr }</td>
+              <td width=65%>${fvo.addr1 }<br>지번:${fvo.addr2 }</td>
             </tr>
             <tr>
               <td width=65%>${fvo.tel }</td>
@@ -47,6 +48,7 @@
          </c:forEach>
         </div>
        </div>
+       
  </div>
 </body>
 </html>

@@ -1,5 +1,4 @@
 package com.sist.naver;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -22,7 +21,7 @@ public class ApiExamSearchBlog {
         }
 
         String apiURL = "https://openapi.naver.com/v1/search/blog?display=100&start=1&query=" + text;    // json 결과
-//        String apiURL = "https://openapi.naver.com/v1/search/blog.xml?display=100&start=1&query="+ text; // xml 결과
+        //String apiURL = "https://openapi.naver.com/v1/search/blog.xml?display=100&start=1&query="+ text; // xml 결과
 
         Map<String, String> requestHeaders = new HashMap<>();
         requestHeaders.put("X-Naver-Client-Id", clientId);
@@ -30,11 +29,12 @@ public class ApiExamSearchBlog {
         String responseBody = get(apiURL,requestHeaders);
 
         System.out.println(responseBody);
-//        try{
-//        	FileWriter fw = new FileWriter("c:\\upload\\naver.xml");
-//        	fw.write(responseBody);
-//        	fw.close();
-//        }catch (Exception ex) {}
+        /*try
+        {
+        	FileWriter fw=new FileWriter("c:\\upload\\naver.json");
+        	fw.write(responseBody);
+        	fw.close();
+        }catch(Exception ex){}*/
         return responseBody;
     }
 
@@ -85,5 +85,5 @@ public class ApiExamSearchBlog {
         } catch (IOException e) {
             throw new RuntimeException("API 응답을 읽는데 실패했습니다.", e);
         }
-	}
+    }
 }

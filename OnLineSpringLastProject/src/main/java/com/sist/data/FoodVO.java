@@ -28,7 +28,6 @@ public class FoodVO {
    private int good;
    private int soso;
    private int bad;
-
 public int getNo() {
 	return no;
 }

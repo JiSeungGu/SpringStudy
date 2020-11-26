@@ -7,9 +7,6 @@ public class FoodVO {
 	   private String title;
 	   private String score;
 	   private String addr;
-	   private String addr1;
-	   private String addr2;
-	   
 	   private String tel;
 	   private String type;
 	   private String price;
@@ -18,8 +15,7 @@ public class FoodVO {
 	   private int soso;
 	   private int bad;
 	   private String posterOne;
-	   
-	   
+	   private String addr1,addr2;
 	   
 	public String getAddr1() {
 		return addr1;
